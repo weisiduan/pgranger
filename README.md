@@ -1,2 +1,2 @@
 # PGRanger
-Sharding layer library for Postgresql
+Sharding layer library for Postgresql.
