@@ -1,0 +1,42 @@
+version: "3.5"
+
+services:
+  shd_0_primary:
+    container_name: shd_0_primary
+    environment:
+      POSTGRES_DB: pgranger_test
+      POSTGRES_USER: pgranger_test
+      POSTGRES_PASSWORD: password
+    image: postgres:12.3
+    ports:
+      - "5443:5432"
+
+  shd_0_replica_0:
+    container_name: shd_0_replica_0
+    environment:
+      POSTGRES_DB: pgranger_test
+      POSTGRES_USER: pgranger_test
+      POSTGRES_PASSWORD: password
+    image: postgres:12.3
+    ports:
+      - "5444:5432"
+
+  shd_0_replica_1:
+    container_name: shd_0_replica_1
+    environment:
+      POSTGRES_DB: pgranger_test
+      POSTGRES_USER: pgranger_test
+      POSTGRES_PASSWORD: password
+    image: postgres:12.3
+    ports:
+      - "5445:5432"
+
+  shd_1_primary:
+    container_name: shd_1_primary
+    environment:
+      POSTGRES_DB: pgranger_test
+      POSTGRES_USER: pgranger_test
+      POSTGRES_PASSWORD: password
+    image: postgres:12.3
+    ports:
+      - "5446:5432"

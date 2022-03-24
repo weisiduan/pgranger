@@ -1,0 +1,88 @@
+{
+  "dbControllers": [
+    {
+      "db": {
+        "dbName": "pgranger_test",
+        "host": "localhost",
+        "port": 5443
+      }
+    },
+    {
+      "db": {
+        "dbName": "pgranger_test",
+        "host": "localhost",
+        "port": 5444
+      }
+    },
+    {
+      "db": {
+        "dbName": "pgranger_test",
+        "host": "localhost",
+        "port": 5445,
+        "sslMode": "disable"
+      }
+    },
+    {
+      "db": {
+        "dbName": "pgranger_test",
+        "host": "localhost",
+        "port": 5446
+      }
+    }
+  ],
+  "namespaces": {
+    "user_id": {
+      "ranges": [
+        {
+          "begin": null,
+          "end": "40",
+          "primaryDB": {
+            "dbName": "pgranger_test",
+            "host": "localhost",
+            "port": 5443
+          },
+          "replicaDBs": [
+            {
+              "dbName": "pgranger_test",
+              "host": "localhost",
+              "port": 5444
+            },
+            {
+              "dbName": "pgranger_test",
+              "host": "localhost",
+              "port": 5445
+            }
+          ]
+        },
+        {
+          "begin": "40",
+          "end": "80",
+          "primaryDB": {
+            "dbName": "pgranger_test",
+            "host": "localhost",
+            "port": 5443
+          }
+        },
+        {
+          "begin": "80",
+          "end": "c0",
+          "primaryDB": {
+            "dbName": "pgranger_test",
+            "host": "localhost",
+            "port": 5446
+          }
+        },
+        {
+          "begin": "c0",
+          "end": null,
+          "primaryDB": {
+            "dbName": "pgranger_test",
+            "host": "localhost",
+            "port": 5446
+          }
+        }
+      ]
+    }
+  },
+  "version": 0
+}
